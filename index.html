@@ -5,20 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="HomePilot designs solar-backed, local-first security and smart systems for UAE villas, farms, and remote properties."
+      content="HomePilot designs local-first smart homes using Zigbee and Z-Wave, so compatible automations keep working when the internet is unavailable."
     />
-    <meta name="theme-color" content="#07110f" />
-    <meta property="og:title" content="HomePilot — Security that stays on" />
+    <meta name="theme-color" content="#2c3531" />
+    <meta property="og:title" content="HomePilot — Smart homes that work locally" />
     <meta
       property="og:description"
-      content="Off-grid security and smart systems, designed for the UAE and owned by you."
+      content="Local-first Zigbee and Z-Wave smart-home systems, designed for UAE homes and owned by you."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://homepilot.ae/" />
     <link rel="canonical" href="https://homepilot.ae/" />
-    <link rel="icon" href="brand-mark.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="styles.css" />
-    <title>HomePilot — Off-grid home security for the UAE</title>
+    <link rel="icon" href="assets/homepilot-icon-green-preview.png" type="image/png" />
+    <link rel="stylesheet" href="styles.css?v=realistic-room-3" />
+    <title>HomePilot — Local-first smart homes for the UAE</title>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -26,14 +26,14 @@
         "name": "HomePilot",
         "url": "https://homepilot.ae/",
         "email": "sales@homepilot.ae",
-        "description": "Solar-backed, local-first security and smart systems for UAE villas and remote properties.",
+        "description": "Local-first Zigbee and Z-Wave smart-home systems for UAE homes.",
         "areaServed": {
           "@type": "Country",
           "name": "United Arab Emirates"
         }
       }
     </script>
-    <script src="script.js" defer></script>
+    <script src="script.js?v=cutaway-room-preview-2" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -41,15 +41,8 @@
     <header class="site-header" data-header>
       <div class="container header-inner">
         <a class="brand" href="#top" aria-label="HomePilot home">
-          <svg class="brand-icon" aria-hidden="true" viewBox="0 0 48 48">
-            <path d="M8 22.5 24 9l16 13.5V40H8V22.5Z" />
-            <path d="M16 36V24.5l8-6.5 8 6.5V36" />
-            <path d="M24 25v11M18.5 30.5h11" />
-          </svg>
-          <span>
-            <strong>HomePilot</strong>
-            <small>Local security systems</small>
-          </span>
+          <img class="header-brand-icon" src="assets/homepilot-icon-green-preview.png" alt="" />
+          <span class="header-brand-name">Home<span>Pilot</span></span>
         </a>
 
         <button
@@ -83,11 +76,11 @@
 
         <div class="container hero-layout">
           <div class="hero-copy" data-reveal>
-            <p class="eyebrow"><span></span> Off-grid security · Abu Dhabi</p>
-            <h1>Security that stays on when everything else goes off.</h1>
+            <p class="eyebrow"><span></span> Local-first smart homes · Abu Dhabi</p>
+            <h1>Your smart home should not stop when the internet does.</h1>
             <p class="hero-lead">
-              Solar-backed, local-first security and smart systems for UAE villas and remote properties.
-              No cloud lock-in. No subscription to see your own footage.
+              HomePilot connects compatible lights, sensors, curtains, locks, and routines through a local Zigbee and
+              Z-Wave hub. Everyday automations stay inside your home instead of depending on a distant cloud.
             </p>
             <div class="hero-actions">
               <a class="button button-primary" href="mailto:sales@homepilot.ae?subject=HomePilot%20site%20survey">
@@ -96,70 +89,91 @@
               <a class="text-link" href="#system">See how it works <span aria-hidden="true">↓</span></a>
             </div>
             <ul class="trust-row" aria-label="System highlights">
-              <li><strong>48h</strong><span>Security autonomy</span></li>
-              <li><strong>Local</strong><span>Recording + AI</span></li>
-              <li><strong>50°C</strong><span>Climate designed</span></li>
+              <li><strong>Local</strong><span>Automation engine</span></li>
+              <li><strong>Zigbee</strong><span>Low-power mesh</span></li>
+              <li><strong>Z-Wave</strong><span>Reliable control</span></li>
             </ul>
           </div>
 
-          <div class="system-visual" data-reveal>
+          <div class="system-visual" data-system-visual data-reveal>
             <div class="visual-topline">
-              <span>HomePilot / Villa Core</span>
-              <span class="live-indicator"><i></i> Protected</span>
+              <span>HomePilot / Bedroom</span>
+              <div class="visual-controls">
+                <span class="live-indicator" data-system-state><i></i><span data-system-label>Internet online</span></span>
+                <button class="demo-toggle" type="button" data-connectivity-toggle aria-pressed="false">Disconnect internet</button>
+              </div>
+            </div>
+
+            <div class="scene-toolbar" aria-label="Try a home mode">
+              <span>Try a mode</span>
+              <button class="scene-pill active" type="button" data-scene="home" aria-pressed="true">Home</button>
+              <button class="scene-pill" type="button" data-scene="away" aria-pressed="false">Away</button>
+              <button class="scene-pill" type="button" data-scene="night" aria-pressed="false">Good night</button>
             </div>
 
             <div class="property-map">
-              <div class="map-grid"></div>
-              <svg class="map-lines" viewBox="0 0 560 400" aria-hidden="true">
-                <path d="M88 85C190 85 210 165 270 165S360 86 470 86" />
-                <path d="M88 315c100 0 130-80 190-80s92 80 194 80" />
-                <path d="M280 165v70" />
-              </svg>
+              <div class="realistic-room">
+                <img class="room-photo" src="assets/bedroom-realistic-day.png" alt="Realistic cutaway bedroom with the bed against the right wall, open floor space on the left, window, air conditioner, and bedside lamp." width="1536" height="1024" fetchpriority="high" />
+                <img class="room-photo room-curtain-state room-curtain-left" src="assets/bedroom-realistic-rest.png" alt="" aria-hidden="true" width="1536" height="1024" />
+                <img class="room-photo room-curtain-state room-curtain-right" src="assets/bedroom-realistic-rest.png" alt="" aria-hidden="true" width="1536" height="1024" />
+                <img class="room-photo room-lamp-state" src="assets/bedroom-realistic-rest.png" alt="" aria-hidden="true" width="1536" height="1024" />
+                <div class="room-light-shade" aria-hidden="true"></div>
+                <svg class="room-cool-air" viewBox="0 0 1536 1024" aria-hidden="true">
+                  <defs>
+                    <linearGradient id="cool-air-fade" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0" stop-color="#bdf5ff" stop-opacity=".9" />
+                      <stop offset="1" stop-color="#8ee5ff" stop-opacity="0" />
+                    </linearGradient>
+                  </defs>
+                  <g fill="none" stroke="url(#cool-air-fade)" stroke-linecap="round">
+                    <path d="M1218 284 C1205 324 1150 326 1158 370 S1110 421 1085 450 S1050 495 1020 530" />
+                    <path d="M1243 293 C1230 337 1175 345 1185 388 S1140 444 1110 476 S1075 520 1045 555" />
+                    <path d="M1268 302 C1255 345 1200 365 1210 405 S1165 462 1135 493 S1100 540 1070 575" />
+                  </g>
+                </svg>
+              </div>
 
-              <div class="map-node node-solar">
-                <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M7 9h26l-3 18H10L7 9Zm4 6h19M9.5 21h21M17 9l-1 18m8-18 1 18M14 32h12" /></svg>
-                <span>Solar array</span><strong>1.4 kWp</strong>
-              </div>
-              <div class="map-node node-camera">
-                <svg viewBox="0 0 40 40" aria-hidden="true"><path d="m8 14 22 2v11L8 29V14Zm7 15v5m-5 0h10M30 19l5-3v11l-5-3" /></svg>
-                <span>Perimeter</span><strong>8 cameras</strong>
-              </div>
-              <div class="map-node node-core">
-                <span class="node-pulse"></span>
-                <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M9 21 24 9l15 12v18H9V21Zm9 18V25h12v14" /></svg>
-                <span>Local core</span><strong>All systems normal</strong>
-              </div>
-              <div class="map-node node-battery">
-                <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M12 7h16v4h3v23H9V11h3V7Zm2 8v15m6-15v15m6-15v15" /></svg>
-                <span>Battery</span><strong>83% · 42h</strong>
-              </div>
-              <div class="map-node node-network">
-                <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M7 16c7-7 19-7 26 0M12 22c4-4 12-4 16 0m-10 6c1-1 3-1 4 0" /></svg>
-                <span>Internet</span><strong class="status-warn">Offline</strong>
-              </div>
+              <button class="room-hotspot hotspot-light" type="button" data-device="light" aria-label="Toggle ceiling lights" aria-pressed="true">
+                <span class="hotspot-icon">☼</span><span class="hotspot-label">Ceiling · <strong data-device-state="light">On</strong></span>
+              </button>
+              <button class="room-hotspot hotspot-plug" type="button" data-device="plug" aria-label="Toggle smart plug for bedside lamp" aria-pressed="true">
+                <span class="hotspot-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3v5m8-5v5M6 8h12v4a6 6 0 0 1-12 0ZM12 18v4"/></svg></span><span class="hotspot-label">Plug / lamp · <strong data-device-state="plug">On</strong></span>
+              </button>
+              <button class="room-hotspot hotspot-curtains" type="button" data-device="curtains" aria-label="Toggle bedroom curtains" aria-pressed="true">
+                <span class="hotspot-icon">↔</span><span class="hotspot-label">Curtains · <strong data-device-state="curtains">Open</strong></span>
+              </button>
+              <button class="room-hotspot hotspot-ac" type="button" data-device="ac" aria-label="Toggle bedroom air conditioning" aria-pressed="true">
+                <span class="hotspot-icon">❄</span><span class="hotspot-label">AC · <strong data-device-state="ac">24°C</strong></span>
+              </button>
+              <button class="room-hotspot hotspot-lock" type="button" data-device="lock" aria-label="Toggle bedroom door lock" aria-pressed="true">
+                <span class="hotspot-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="11" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3M12 14v3"/></svg></span><span class="hotspot-label">Door · <strong data-device-state="lock">Locked</strong></span>
+              </button>
+
+              <div class="room-hub"><img src="assets/homepilot-icon-green-preview.png" alt="" /><span data-core-state>Local controls active</span></div>
+              <div class="room-network"><i></i><span>Internet</span><strong data-network-state>Online</strong></div>
             </div>
 
-            <div class="visual-alert">
+            <div class="visual-alert" aria-live="polite">
               <span class="shield-check" aria-hidden="true">✓</span>
-              <div><strong>Protection continues</strong><small>Recording, detection and alarms remain local</small></div>
-              <span class="alert-time">Now</span>
+              <div><strong data-alert-title>Local controls ready</strong><small data-alert-copy>Press a device, choose a mode, or disconnect the internet</small></div>
+              <span class="alert-time" data-alert-time>Live</span>
             </div>
           </div>
         </div>
 
         <div class="container hero-footnote">
-          <p><span>Built for</span> Villas · Farms · Construction sites · Remote properties</p>
+          <p><span>Built for</span> Villas · Apartments · Renovations · New homes</p>
         </div>
       </section>
 
       <section class="manifesto section" id="system">
         <div class="container narrow" data-reveal>
           <p class="section-label">The HomePilot difference</p>
-          <h2>Your cameras should not depend on the same things they are meant to protect.</h2>
+          <h2>The useful parts of your smart home should live in your home.</h2>
           <p>
-            A cut breaker, failed internet connection, or discontinued cloud service should never blind your property.
-            HomePilot separates the security layer from the house: dedicated power, local intelligence, verified storage,
-            and one system you own outright.
+            When the internet is unavailable, compatible local devices and automations can continue through your hub and
+            Zigbee or Z-Wave mesh. Remote app access, cloud voice assistants, and cloud notifications may pause until the
+            connection returns.
           </p>
         </div>
 
@@ -167,12 +181,12 @@
           <article class="principle-card" data-reveal>
             <span class="card-index">01</span>
             <div class="principle-icon power-icon" aria-hidden="true"><i></i></div>
-            <h3>It stays on.</h3>
-            <p>Dedicated solar and LiFePO₄ battery keep the security layer running through power cuts—for days, not hours.</p>
+            <h3>It works locally.</h3>
+            <p>Your core routines run on a hub inside the home, so an internet outage does not have to stop everyday control.</p>
             <ul>
-              <li>Grid-optional architecture</li>
-              <li>Automatic load shedding</li>
-              <li>4G/5G internet failover</li>
+              <li>Zigbee and Z-Wave mesh devices</li>
+              <li>Local scenes and schedules</li>
+              <li>Normal wall controls still work</li>
             </ul>
           </article>
 
@@ -180,7 +194,7 @@
             <span class="card-index">02</span>
             <div class="principle-icon local-icon" aria-hidden="true"><i></i><i></i><i></i></div>
             <h3>It stays yours.</h3>
-            <p>Recording, detection, and automation run inside your property. Your footage is not somebody else’s cloud asset.</p>
+            <p>Compatible automation and security functions run inside your property, with credentials and configuration in your name.</p>
             <ul>
               <li>30–90 day local retention</li>
               <li>No open internet ports</li>
@@ -192,7 +206,7 @@
             <span class="card-index">03</span>
             <div class="principle-icon care-icon" aria-hidden="true"><i></i></div>
             <h3>It stays maintained.</h3>
-            <p>We monitor system health—not footage—so batteries, disks, cameras, and solar yield are fixed before they fail.</p>
+            <p>We monitor system health—not private activity—so hubs, devices, mesh quality, storage, and integrations stay reliable.</p>
             <ul>
               <li>Proactive health alerts</li>
               <li>Twice-yearly site care</li>
@@ -205,18 +219,18 @@
       <section class="climate-band">
         <div class="container climate-layout">
           <div data-reveal>
-            <p class="section-label light">Designed for the Gulf</p>
-            <h2>Heat and dust are the design brief—not the fine print.</h2>
+            <p class="section-label light">Designed around your home</p>
+            <h2>Reliable automation starts with the right network.</h2>
           </div>
           <div class="climate-copy" data-reveal>
             <p>
-              Shaded, ventilated enclosures. Protected battery charging. Oversized solar arrays. Surge protection on every
-              outdoor run. Every design starts with Abu Dhabi in July, not a laboratory datasheet.
+              We survey wall construction, device locations, interference, and the routes between rooms before specifying
+              hardware. Mains-powered Zigbee and Z-Wave devices can strengthen the mesh as repeaters.
             </p>
             <div class="climate-stats">
-              <span><strong>50°C</strong> ambient design target</span>
-              <span><strong>20–30%</strong> soiling margin</span>
-              <span><strong>IP66+</strong> outdoor equipment</span>
+              <span><strong>Local</strong> automation engine</span>
+              <span><strong>2-way</strong> mesh communication</span>
+              <span><strong>Tested</strong> room by room</span>
             </div>
           </div>
         </div>
@@ -244,8 +258,8 @@
               <li>6–8 local-AI cameras</li>
               <li>30-day verified local recording</li>
               <li>Door, motion, siren + strobe</li>
-              <li>48-hour power autonomy</li>
-              <li>4G/5G failover</li>
+              <li>Local alarm and response routines</li>
+              <li>Zigbee / Z-Wave sensors</li>
             </ul>
             <a href="mailto:sales@homepilot.ae?subject=HomePilot%20GUARD%20survey">Discuss GUARD <span>↗</span></a>
           </article>
@@ -275,7 +289,7 @@
             </div>
             <h3>HOMEBASE</h3>
             <p class="package-price">AED 30,000–50,000 <small>indicative, installed</small></p>
-            <p class="package-description">The complete local-first house: security, comfort, access, and energy in one app.</p>
+            <p class="package-description">The complete local-first house: security, comfort, access, and routines in one interface.</p>
             <ul class="feature-list">
               <li>Everything in GUARD+</li>
               <li>Lighting + AC zone control</li>
@@ -286,23 +300,6 @@
             <a href="mailto:sales@homepilot.ae?subject=HomePilot%20HOMEBASE%20survey">Discuss HOMEBASE <span>↗</span></a>
           </article>
 
-          <article class="package-card outpost" data-package="outpost" data-reveal>
-            <div class="package-head">
-              <span class="package-number">04</span>
-              <span class="package-tag">No grid. No fibre. No problem.</span>
-            </div>
-            <h3>OUTPOST</h3>
-            <p class="package-price">AED 8,000–18,000 <small>indicative, per node</small></p>
-            <p class="package-description">A fully autonomous protection node for farms, plots, chalets, and construction sites.</p>
-            <ul class="feature-list">
-              <li>400–600 W dedicated solar</li>
-              <li>2–6 local-recording cameras</li>
-              <li>4G/5G + event clip alerts</li>
-              <li>LoRa gate, tank + pump sensors</li>
-              <li>Heat-hardened enclosure</li>
-            </ul>
-            <a href="mailto:sales@homepilot.ae?subject=HomePilot%20OUTPOST%20survey">Discuss OUTPOST <span>↗</span></a>
-          </article>
         </div>
 
         <div class="container finder" data-reveal>
@@ -315,7 +312,7 @@
               Property
               <select data-property-select>
                 <option value="villa">Villa</option>
-                <option value="remote">Farm or remote site</option>
+                <option value="apartment">Apartment</option>
                 <option value="commercial">Small commercial site</option>
               </select>
             </label>
@@ -352,11 +349,11 @@
           <div class="care-panel" data-reveal>
             <div class="care-item">
               <span class="care-check">✓</span>
-              <div><strong>Proactive health monitoring</strong><p>Camera uptime, storage, battery health, solar yield, and network status—never customer footage.</p></div>
+              <div><strong>Proactive health monitoring</strong><p>Hub uptime, device reachability, mesh quality, storage, and integrations—never private camera footage.</p></div>
             </div>
             <div class="care-item">
               <span class="care-check">✓</span>
-              <div><strong>Two scheduled visits each year</strong><p>Panel and lens cleaning, mount and seal inspection, battery test, and complete system verification.</p></div>
+              <div><strong>Two scheduled visits each year</strong><p>Sensor checks, device testing, configuration review, and complete system verification.</p></div>
             </div>
             <div class="care-item">
               <span class="care-check">✓</span>
@@ -373,22 +370,22 @@
       <section class="process section" id="process">
         <div class="container section-heading" data-reveal>
           <div><p class="section-label">From property to protection</p><h2>No box jobs. Every system is proven.</h2></div>
-          <p>The commissioning test matters as much as the hardware. We pull the power and internet before handover so you know what happens next.</p>
+           <p>The commissioning test matters as much as the hardware. We disconnect the internet before handover and prove which controls and automations continue locally.</p>
         </div>
 
         <ol class="container process-list">
-          <li data-reveal><span>01</span><h3>Qualify</h3><p>A short call confirms the property, priorities, existing equipment, grid, and connectivity.</p></li>
-          <li data-reveal><span>02</span><h3>Survey</h3><p>A paid site visit maps coverage, cable routes, power, roof conditions, shade, and enclosure locations.</p></li>
-          <li data-reveal><span>03</span><h3>Design</h3><p>You receive a fixed-scope design pack with coverage, power, retention, equipment, and options.</p></li>
-          <li data-reveal><span>04</span><h3>Install</h3><p>Power, network, recording, cameras, and sensors are installed to one documented standard.</p></li>
-          <li data-reveal><span>05</span><h3>Prove</h3><p>Power and WAN are pulled, alerts and failover are tested, and every result is signed at handover.</p></li>
+          <li data-reveal><span>01</span><h3>Qualify</h3><p>A short call confirms the property, priorities, existing equipment, and connectivity.</p></li>
+          <li data-reveal><span>02</span><h3>Survey</h3><p>A site visit maps rooms, wall construction, device locations, cable routes, and mesh coverage.</p></li>
+          <li data-reveal><span>03</span><h3>Design</h3><p>You receive a fixed-scope design with devices, local routines, integrations, and options.</p></li>
+          <li data-reveal><span>04</span><h3>Install</h3><p>The hub, network, switches, sensors, locks, and scenes are installed to one documented standard.</p></li>
+          <li data-reveal><span>05</span><h3>Prove</h3><p>Every control is tested, the internet is disconnected, and the local result is demonstrated at handover.</p></li>
         </ol>
       </section>
 
       <section class="ownership section">
         <div class="container ownership-layout">
           <div class="ownership-mark" aria-hidden="true" data-reveal>
-            <svg viewBox="0 0 120 120"><path d="M22 51 60 19l38 32v47H22V51Zm23 47V60h30v38" /><path d="M60 68v17m-8.5-8.5h17" /></svg>
+            <img src="assets/homepilot-icon-green-preview.png" alt="" />
           </div>
           <div data-reveal>
             <p class="section-label">No lock-in, by design</p>
@@ -412,16 +409,16 @@
           <div data-reveal><p class="section-label">Good questions</p><h2>Before you invite us over.</h2></div>
           <div class="accordion" data-accordion>
             <details data-reveal>
-              <summary>Does “off-grid” mean my villa disconnects from mains power?</summary>
-              <p>No. The security layer has dedicated solar and battery power, while mains can remain a secondary charging source. Your villa stays connected; your protection becomes grid-optional.</p>
+              <summary>Will the system work during a power cut?</summary>
+              <p>Not unless the hub, router, and relevant devices have backup power. HomePilot’s local-first design is for internet outages; it does not replace an electrical backup system.</p>
             </details>
             <details data-reveal>
               <summary>Can you see my camera footage?</summary>
-              <p>Not by default. CARE monitors equipment telemetry such as camera uptime, disk health, battery charge, and solar yield—not footage. Any temporary support access is explicit and controlled.</p>
+              <p>Not by default. CARE monitors equipment telemetry such as hub uptime, device reachability, storage health, and mesh quality—not footage. Any temporary support access is explicit and controlled.</p>
             </details>
             <details data-reveal>
               <summary>What happens when the internet is down?</summary>
-              <p>Local recording, detection, automations, sirens, and access controls continue. Where specified, notifications fail over to 4G or 5G automatically.</p>
+              <p>Compatible local controls, sensors, schedules, and scenes continue through the hub and Zigbee or Z-Wave mesh. Remote app access, cloud voice control, and cloud notifications may pause until the connection returns.</p>
             </details>
             <details data-reveal>
               <summary>Do I need a monthly subscription?</summary>
@@ -440,7 +437,7 @@
         <div class="container cta-inner" data-reveal>
           <p class="section-label light">Start with a real property</p>
           <h2>Let’s design the system your house should have had from day one.</h2>
-          <p>Tell us what you are protecting, what has failed before, and whether the property has grid power and fibre.</p>
+          <p>Tell us what you want to control, which routines matter, and what should keep working if the internet is unavailable.</p>
           <div class="cta-actions">
             <a class="button button-light" href="mailto:sales@homepilot.ae?subject=HomePilot%20site%20survey">Book a site survey ↗</a>
             <a href="mailto:sales@homepilot.ae">sales@homepilot.ae</a>
@@ -453,10 +450,10 @@
       <div class="container footer-grid">
         <div>
           <a class="brand footer-brand" href="#top">
-            <svg class="brand-icon" aria-hidden="true" viewBox="0 0 48 48"><path d="M8 22.5 24 9l16 13.5V40H8V22.5Z"/><path d="M16 36V24.5l8-6.5 8 6.5V36"/><path d="M24 25v11M18.5 30.5h11"/></svg>
-            <span><strong>HomePilot</strong><small>Local security systems</small></span>
+            <img class="brand-icon-image" src="assets/homepilot-icon-green-preview.png" alt="" aria-hidden="true" />
+            <span><strong>HomePilot</strong><small>Local-first smart homes</small></span>
           </a>
-          <p>Security and smart systems that stay on, stay yours, and stay maintained.</p>
+          <p>Smart-home controls designed to stay local, stay yours, and stay maintainable.</p>
         </div>
         <div class="footer-links">
           <strong>Explore</strong>
@@ -477,7 +474,7 @@
       </div>
       <div class="container footer-bottom">
         <span>© <span data-year></span> HomePilot. All rights reserved.</span>
-        <span>Designed for 50°C. Built to keep running.</span>
+        <span>Designed locally. Tested offline.</span>
       </div>
     </footer>
   </body>
